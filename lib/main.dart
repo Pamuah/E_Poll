@@ -1,3 +1,4 @@
+import 'package:e_polls/Screens/landing.dart';
 import 'package:e_polls/const/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +14,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: themeData(context),
       debugShowCheckedModeBanner: false,
+      // initialRoute: LandingPage.routeName,
+      home: const LandingPage(),
     );
   }
 }
