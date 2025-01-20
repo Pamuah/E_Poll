@@ -1,4 +1,5 @@
 import 'package:e_polls/Screens/landing.dart';
+import 'package:e_polls/Screens/sign_Up.dart';
 import 'package:e_polls/const/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: themeData(context),
       debugShowCheckedModeBanner: false,
       // initialRoute: LandingPage.routeName,
-      home: const LandingPage(),
+      home: const SignUpPage(),
     );
   }
 }
