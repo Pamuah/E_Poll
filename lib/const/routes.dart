@@ -1,3 +1,4 @@
+import 'package:e_polls/Screens/info_poll1.dart';
 import 'package:e_polls/Screens/landing.dart';
 
 import 'package:flutter/material.dart';
@@ -9,6 +10,7 @@ class AppRoutes {
     return {
       LandingPage.routeName: (context) => const LandingPage(),
       SignUpPage.routeName: (context) => const SignUpPage(),
+      InfoPoll1.routeName: (context) => const InfoPoll1(),
     };
   }
 }

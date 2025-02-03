@@ -1,3 +1,4 @@
+import 'package:e_polls/Screens/info_poll1.dart';
 import 'package:e_polls/Screens/landing.dart';
 import 'package:e_polls/Screens/sign_Up.dart';
 import 'package:e_polls/const/theme.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: themeData(context),
       debugShowCheckedModeBanner: false,
       // initialRoute: LandingPage.routeName,
-      home: const SignUpPage(),
+      home: const InfoPoll1(),
     );
   }
 }
