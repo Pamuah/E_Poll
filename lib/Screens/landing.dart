@@ -80,7 +80,9 @@ class _LandingPageState extends State<LandingPage> {
             child: SizedBox(
               width: MediaQuery.sizeOf(context).width * 0.8,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, "/login");
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: colorScheme.primary,
                   padding:

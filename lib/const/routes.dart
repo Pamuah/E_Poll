@@ -1,3 +1,4 @@
+import 'package:e_polls/Screens/Login.dart';
 import 'package:e_polls/Screens/info_poll1.dart';
 import 'package:e_polls/Screens/landing.dart';
 
@@ -11,6 +12,7 @@ class AppRoutes {
       LandingPage.routeName: (context) => const LandingPage(),
       SignUpPage.routeName: (context) => const SignUpPage(),
       InfoPoll1.routeName: (context) => const InfoPoll1(),
+      LoginPage.routeName: (context) => const LoginPage(),
     };
   }
 }

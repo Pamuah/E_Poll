@@ -1,6 +1,7 @@
+import 'package:e_polls/Screens/Login.dart';
+import 'package:e_polls/Screens/homepage.dart';
 import 'package:e_polls/Screens/info_poll1.dart';
-import 'package:e_polls/Screens/landing.dart';
-import 'package:e_polls/Screens/sign_Up.dart';
+import 'package:e_polls/const/routes.dart';
 import 'package:e_polls/const/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -14,10 +15,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: AppRoutes().getRoutes(),
       theme: themeData(context),
       debugShowCheckedModeBanner: false,
       // initialRoute: LandingPage.routeName,
-      home: const InfoPoll1(),
+      home: HomePage(),
     );
   }
 }

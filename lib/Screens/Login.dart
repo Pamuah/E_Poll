@@ -3,23 +3,21 @@ import 'package:e_polls/widget/custom_textfield.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class SignUpPage extends StatefulWidget {
-  static const routeName = "/sign_up";
-  const SignUpPage({super.key});
+class LoginPage extends StatefulWidget {
+  static const String routeName = '/login';
+  const LoginPage({super.key});
 
   @override
-  State<SignUpPage> createState() => _SignUpPageState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _SignUpPageState extends State<SignUpPage> {
+class _LoginPageState extends State<LoginPage> {
   TextEditingController emailController = TextEditingController();
-  TextEditingController usernameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
   @override
   void dispose() {
     emailController.dispose();
-    usernameController.dispose();
     passwordController.dispose();
     // TODO: implement dispose
     super.dispose();
@@ -50,7 +48,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Sign Up",
+                    "Sign In",
                     style: TextStyle(
                       fontSize: 26,
                       color: colorscheme.onSurface,
@@ -69,22 +67,6 @@ class _SignUpPageState extends State<SignUpPage> {
                         color: Colors.grey,
                         fontWeight: FontWeight.w400,
                       ),
-                    ),
-                  ),
-                  Text(
-                    "Username",
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: colorscheme.onSurface,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 5.0, bottom: 20),
-                    child: CustomTextField(
-                      label: "Username",
-                      icon: const Icon(CupertinoIcons.person),
-                      controller: usernameController,
                     ),
                   ),
                   Text(
@@ -137,16 +119,39 @@ class _SignUpPageState extends State<SignUpPage> {
                   ),
                   CustomElevatedButton(
                       width: double.infinity,
-                      text: "Sign Up",
+                      text: "Login",
                       onPressed: () {
-                        Navigator.pushNamed(context, "/login");
+                        Navigator.pushNamed(context, '/info_poll1');
                       },
                       backgroundColor: colorscheme.primary,
                       textColor: colorscheme.onPrimary,
                       borderRadius: 15.0,
                       padding: const EdgeInsets.symmetric(
                           horizontal: 40, vertical: 14),
-                      fontSize: 22)
+                      fontSize: 22),
+                  Row(
+                    children: [
+                      const Text(
+                        "Don't have an account?",
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.grey,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                      TextButton(
+                        onPressed: () {},
+                        child: const Text(
+                          "Sign Up",
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.blue,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ),
+                    ],
+                  )
                 ]),
           ),
         ));

@@ -33,7 +33,9 @@ class _InfoPoll1State extends State<InfoPoll1> {
               fontWeight: FontWeight.w600),
         ),
         leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: const Icon(
               CupertinoIcons.back,
               size: 30,
@@ -143,7 +145,7 @@ class _InfoPoll1State extends State<InfoPoll1> {
                     backgroundColor: colorscheme.primary,
                     textColor: colorscheme.onPrimary,
                     borderRadius: 12.0,
-                    padding: EdgeInsets.all(12.0),
+                    padding: const EdgeInsets.all(12.0),
                     fontSize: 20),
               )
             ]),
