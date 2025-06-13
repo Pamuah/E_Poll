@@ -4,6 +4,7 @@ import 'package:e_polls/Screens/info_poll1.dart';
 import 'package:e_polls/const/routes.dart';
 import 'package:e_polls/const/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:e_polls/Screens/info_poll2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: themeData(context),
       debugShowCheckedModeBanner: false,
       // initialRoute: LandingPage.routeName,
-      home: HomePage(),
+      home: const InfoPoll2(),
     );
   }
 }

@@ -15,7 +15,7 @@ class PollCards extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
         // height: 200,
         width: MediaQuery.of(context).size.width * 0.5,
         child: Card(
