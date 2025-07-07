@@ -141,7 +141,9 @@ class _InfoPoll1State extends State<InfoPoll1> {
                 padding: const EdgeInsets.only(top: 30.0),
                 child: CustomElevatedButton(
                     text: "Next   1/2",
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/info_poll2');
+                    },
                     backgroundColor: colorscheme.primary,
                     textColor: colorscheme.onPrimary,
                     borderRadius: 12.0,

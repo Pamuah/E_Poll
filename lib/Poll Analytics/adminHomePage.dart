@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../const/themeExtension.dart';
 
 class AdminsHomePage extends StatefulWidget {
+  static const String routeName = '/AdminsHomePage';
   const AdminsHomePage({super.key});
 
   @override

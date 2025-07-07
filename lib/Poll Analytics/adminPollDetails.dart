@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AdminPollDetails extends StatefulWidget {
+  static const String routeName = "/adminPollDetails";
   const AdminPollDetails({super.key});
 
   @override

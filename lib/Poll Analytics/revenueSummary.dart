@@ -4,6 +4,7 @@ import '../const/themeExtension.dart';
 import '../widget/revenue_card.dart';
 
 class RevenueSummaryPage extends StatelessWidget {
+  static const String routeName = '/revenuepage';
   const RevenueSummaryPage({super.key});
 
   @override

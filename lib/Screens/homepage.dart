@@ -1,7 +1,9 @@
+import 'package:e_polls/widget/bottomNavBar.dart';
 import 'package:e_polls/widget/poll_cards.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
+  static const String routeName = '/home';
   const HomePage({super.key});
 
   @override
@@ -18,60 +20,74 @@ class _HomePageState extends State<HomePage> {
         child: Padding(
           padding: const EdgeInsets.all(12.0),
           child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  "Good Morning",
-                  style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 20.0, bottom: 30.0),
-                  child: Container(
-                    height: 100,
-                    width: 400,
-                    decoration: BoxDecoration(
-                        color: colorscheme.tertiary,
-                        borderRadius: BorderRadius.circular(10)),
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Text(
-                        "12 Active polls",
-                        style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.w600,
-                            color: colorscheme.onTertiary),
-                      ),
-                    ),
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text(
+                "Good Morning",
+                style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 20.0, bottom: 30.0),
+                child: Container(
+                  height: 100,
+                  width: 400,
+                  decoration: BoxDecoration(
+                    color: colorscheme.tertiary,
+                    borderRadius: BorderRadius.circular(10),
                   ),
-
-                  // search bar
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 20.0),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      hintText: 'Search',
-                      hintStyle: TextStyle(color: Colors.grey[700]),
-                      suffixIcon: Icon(
-                        Icons.search,
-                        color: Colors.grey[700],
-                        size: 32.0,
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      "12 Active polls",
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.w600,
+                        color: colorscheme.onTertiary,
                       ),
                     ),
                   ),
                 ),
-                const PollCards(
-                  image: 'assets/knust logo.jpg',
-                  endTime: '12/12/2023',
-                  votes: 1232,
-                  title: 'KNUST SRC ELECTION',
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 20.0),
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    hintText: 'Search',
+                    hintStyle: TextStyle(color: Colors.grey[700]),
+                    suffixIcon: Icon(
+                      Icons.search,
+                      color: Colors.grey[700],
+                      size: 32.0,
+                    ),
+                  ),
                 ),
-              ]),
+              ),
+              const PollCards(
+                image: 'assets/knust logo.jpg',
+                endTime: '12/12/2023',
+                votes: 1232,
+                title: 'KNUST SRC ELECTION',
+              ),
+            ],
+          ),
         ),
+      ),
+      bottomNavigationBar: CustomBottomNav(
+        currentIndex: 0,
+        onTap: (index) {
+          // handle navigation logic here, for now we stay on Home
+          if (index == 1) {
+            // Navigate to notifications
+            // Navigator.pushNamed(context, NotificationsPage.routeName);
+          } else if (index == 2) {
+            // Navigate to dashboard or settings
+            // Navigator.pushNamed(context, DashboardPage.routeName);
+          }
+        },
       ),
     );
   }
